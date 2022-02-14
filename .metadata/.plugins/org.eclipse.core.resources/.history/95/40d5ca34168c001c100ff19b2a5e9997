@@ -1,0 +1,13 @@
+package Main;
+
+import dao.VagaDao;
+
+public class VagaMain {
+
+	public static void main(String[] args) {
+		
+		VagaDao vagaDao = new VagaDao();
+		
+	}
+
+}

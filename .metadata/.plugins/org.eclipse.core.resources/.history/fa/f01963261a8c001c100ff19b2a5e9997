@@ -1,0 +1,87 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import factory.ConnectionFactory;
+import model.Vaga;
+
+public class VagaDao {
+	
+	public void save(Vaga vaga) {
+		
+		String sql = "INSERT INTO Vaga (linkVaga, vaga) VALUES (?, ?)";
+		
+		Connection conn = null;
+		PreparedStatement pstm = null;
+		
+		try {
+			conn = ConnectionFactory.createConnectionSQLServer();
+			pstm = conn.prepareStatement(sql);
+			
+			pstm.setString(1, vaga.getLinkVaga());
+			pstm.setString(2, vaga.getVaga());
+			
+			pstm.execute();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+				if (pstm != null) {
+					pstm.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} 
+	}
+	
+	public void removeById(int idVaga) {
+		
+		String sql = "DELETE FROM Vaga WHERE idVaga = ?";
+		
+		Connection conn = null;
+		PreparedStatement pstm = null;
+		
+		try {
+			conn = ConnectionFactory.createConnectionSQLServer();
+			pstm = conn.prepareStatement(sql);
+			
+			pstm.setInt(1, idVaga);
+			
+			pstm.execute();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+				if (pstm != null) {
+					pstm.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public void update(Vaga vaga) {
+		
+		String sql = "UPDATE Vaga SET linkVaga = ?, vaga = ? WHERE idVaga = ?";
+		
+		Connection conn = null;
+		PreparedStatement pstm = null;
+		
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

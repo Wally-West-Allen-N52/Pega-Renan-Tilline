@@ -1,0 +1,56 @@
+package model;
+
+public class Cadastro {
+	private int idCadastro;
+	private String setor;
+	private String responsavel;
+	private String cnpj;
+	private String empresa;
+	
+	// Foreign keys
+	private int FKcadastro;
+	private Cadastro cadastro;
+	public int getIdCadastro() {
+		return idCadastro;
+	}
+	public void setIdCadastro(int idCadastro) {
+		this.idCadastro = idCadastro;
+	}
+	public String getSetor() {
+		return setor;
+	}
+	public void setSetor(String setor) {
+		this.setor = setor;
+	}
+	public String getResponsavel() {
+		return responsavel;
+	}
+	public void setResponsavel(String responsavel) {
+		this.responsavel = responsavel;
+	}
+	public String getCnpj() {
+		return cnpj;
+	}
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	public String getEmpresa() {
+		return empresa;
+	}
+	public void setEmpresa(String empresa) {
+		this.empresa = empresa;
+	}
+	public int getFKcadastro() {
+		return FKcadastro;
+	}
+	public void setFKcadastro(int fKcadastro) {
+		FKcadastro = fKcadastro;
+	}
+	public Cadastro getCadastro() {
+		return cadastro;
+	}
+	public void setCadastro(Cadastro cadastro) {
+		this.cadastro = cadastro;
+	}
+	
+}

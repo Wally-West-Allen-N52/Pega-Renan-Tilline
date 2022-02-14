@@ -1,0 +1,15 @@
+package model;
+
+public class Cadastro {
+	private int idCadastro;
+	private String setor;
+	private String responsavel;
+	private String cnpj;
+	private String empresa;
+	
+	// Foreign keys
+	private int FkidVaga;
+	private Vaga vaga;
+	
+	
+}

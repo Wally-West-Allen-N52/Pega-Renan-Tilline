@@ -1,0 +1,26 @@
+package model;
+
+public class Vaga {
+	private int id;
+	private String linkVaga;
+	private String vaga;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getLinkVaga() {
+		return linkVaga;
+	}
+	public void setLinkVaga(String linkVaga) {
+		this.linkVaga = linkVaga;
+	}
+	public String getVaga() {
+		return vaga;
+	}
+	public void setVaga(String vaga) {
+		this.vaga = vaga;
+	}
+}

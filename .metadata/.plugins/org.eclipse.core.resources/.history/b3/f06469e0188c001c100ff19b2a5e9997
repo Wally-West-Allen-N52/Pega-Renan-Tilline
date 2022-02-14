@@ -1,0 +1,25 @@
+package Main;
+
+import dao.VagaDao;
+import model.Vaga;
+
+public class VagaMain {
+
+	public static void main(String[] args) {
+		
+		VagaDao vagaDao = new VagaDao();
+	
+		// ================= save method ===================
+//		
+		Vaga vaga = new Vaga();
+//		vaga.setLinkVaga("linkedin.com");
+//		vaga.setVaga("Recondicionador de macaco hidraulico");
+//		
+//		vagaDao.save(vaga);
+		
+	// ======================= remove method =====================
+		
+		vagaDao.removeById(2);
+	}
+
+}
